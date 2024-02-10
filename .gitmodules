@@ -1,0 +1,3 @@
+[submodule "kispython/kispython"]
+	path = kispython/kispython
+	url = https://github.com/true-grue/kispython
