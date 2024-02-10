@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "kis-pyton-2-course"
+name = "kis-python-2-course"
 version = "0.1.0"
 description = ""
 authors = ["benzlokzik <121052717+benzlokzik@users.noreply.github.com>"]
