@@ -292,3 +292,5 @@ pyrightconfig.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,jupyternotebooks,jetbrains+all
+
+*/.DS_STORE
