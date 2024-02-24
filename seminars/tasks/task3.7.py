@@ -1,6 +1,6 @@
 def mul_bits(x, y, bits) -> int:
-    x &= (2 ** bits - 1)
-    y &= (2 ** bits - 1)
+    x &= 2**bits - 1
+    y &= 2**bits - 1
     return x * y
 
 
@@ -14,8 +14,8 @@ def mul16(x, y):
     y1: int
     y0: int
 
-    x1, x0 = x >> 8, x & 0xff
-    y1, y0 = y >> 8, y & 0xff
+    x1, x0 = x >> 8, x & 0xFF
+    y1, y0 = y >> 8, y & 0xFF
     p0: int = mul_bits(x1, y1, 8)
     p1: int = mul_bits(x1, y0, 8) + mul_bits(y1, x0, 8)
     p2: int = mul_bits(x0, y0, 8)
