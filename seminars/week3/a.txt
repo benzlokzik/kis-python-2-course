@@ -1,0 +1,22 @@
+main.py:1:1: E265 block comment should start with '# '
+main.py:4:2: E225 missing whitespace around operator
+main.py:6:1: E302 expected 2 blank lines, found 0
+main.py:6:8: E231 missing whitespace after ','
+main.py:6:10: E203 whitespace before ':'
+main.py:7:7: E111 indentation is not a multiple of 4
+main.py:7:7: E117 over-indented
+main.py:11:7: E731 do not assign a lambda expression, use a def
+main.py:12:24: E701 multiple statements on one line (colon)
+main.py:13:31: E262 inline comment should start with '# '
+main.py:16:7: E741 ambiguous variable name 'I'
+main.py:17:25: E201 whitespace after '('
+main.py:20:7: E128 continuation line under-indented for visual indent
+main.py:25:31: E702 multiple statements on one line (semicolon)
+main.py:25:37: E272 multiple spaces before keyword
+main.py:25:46: E271 multiple spaces after keyword
+main.py:25:60: E211 whitespace before '('
+main.py:25:63: E202 whitespace before ')'
+main.py:25:80: E501 line too long (216 > 79 characters)
+main.py:25:115: E274 tab before keyword
+main.py:25:118: E273 tab after keyword
+main.py:27:16: E901 TabError: inconsistent use of tabs and spaces in indentation
