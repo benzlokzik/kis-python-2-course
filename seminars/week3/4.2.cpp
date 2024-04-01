@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 void decrypt(uint32_t v[2], const uint32_t k[4]) {
     uint32_t v0 = v[0], v1 = v[1], sum = 0xC6EF3720, i;
     uint32_t delta = 0x9E3779B9;
