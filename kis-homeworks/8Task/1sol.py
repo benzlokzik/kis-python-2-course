@@ -1,18 +1,22 @@
 def main(decimal_str):
     num = int(decimal_str)
-    print(f"\nInput number: {num}")
-    print(f"Binary representation: {bin(num)}, symbol count: {len(bin(num)) - 2}")
 
     L1 = num & 0xFF  # bits [7:0]
     L2 = (num >> 8) & 0xF  # bits [11:8]
     L3 = (num >> 12) & 0x7  # bits [14:12]
-    print(f"L1: {bin(L1)}, L2: {bin(L2)}, L3: {bin(L3)}")
 
-    output_num = (L2 << 20) | (L3 << 17) | (L1 << 9)
-
-    # Convert the output number to a hexadecimal string
-    output_hex = f"0x{output_num:06X}"
-    print(bin(output_num))
+    output_num = (
+        "0b"
+        + "0" * (4 - len(bin(L2)[2:]))
+        + bin(L2)[2:]
+        + "0" * (3 - len(bin(L3)[2:]))
+        + bin(L3)[2:]
+        + "0" * (8 - len(bin(L1)[2:]))
+        + bin(L1)[2:]
+        + "0" * 10
+    )
+    output_num = int(output_num, 2)
+    output_hex = f"0x{output_num:06X}".lower()
 
     return output_hex
 
@@ -28,7 +32,7 @@ def test():
     # Test case 1
     assert main("6084") == "0xE71000"
     # Test case 2
-    assert main("19153") == "0x153440"
+    assert main("19153") == "0x1534400"
     # Test case 3
     assert main("2444") == "0x1223000"
     # Test case 4
